@@ -3,7 +3,8 @@ from requests_oauthlib import OAuth1
 import requests,re
 from urllib.parse import urljoin
 from bs4 import BeautifulSoup
-
+# pakai module https://pypi.org/project/free-proxy/
+# code error karna proxy anjim
 # copy this '()'
 proxy = {}
 def proxy_port():
