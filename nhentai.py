@@ -5,6 +5,7 @@ from urllib.parse import urljoin
 from bs4 import BeautifulSoup
 # pakai module https://pypi.org/project/free-proxy/
 # code error karna proxy anjim
+# proxy yang mau proxies = {'https': 'https://95.211.211.212:3128', 'http': 'http://95.211.211.212:3128'}
 # copy this '()'
 proxy = {}
 def proxy_port():
@@ -23,7 +24,6 @@ def nekopoi(ip,main_url):
 
     session = requests.session()
     session.proxies = {"https":"https://"+ip,"http":"http://"+ip}
-    # r = session.get("https://api.github.com/user",auth= HTTPBasicAuth('gustiganes@gmail.com', 'ghanes123456789'))
     r = session.get(main_url)
     soup = BeautifulSoup(r.content,"lxml")
     list_link = soup.find_all("a")
