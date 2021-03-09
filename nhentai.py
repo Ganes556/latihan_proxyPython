@@ -7,6 +7,23 @@ from bs4 import BeautifulSoup
 # code error karna proxy anjim
 # proxy yang mau proxies = {'https': 'https://95.211.211.212:3128', 'http': 'http://95.211.211.212:3128'}
 # copy this '()'
+# logic used proxy: 
+    # while 1:
+    #     isi = False
+    #     proxies = {'https': 'https://95.211.211.212:3128', 'http': 'http://95.211.211.212:3128'}
+    #     try:
+    #         r = requests.get("https://nekopoi.care",proxies=proxies)
+    #         print(proxies)
+    #         print(r.text.encode())
+    #         isi = True
+    #     except requests.exceptions.ConnectionError:
+    #         number = str(random.randint(1,len(proxy)))
+    #         proxies = {"https":"https://"+proxy[number],"http":"http://"+proxy[number]}
+    #         print("Proxy Connection Error")
+
+    #     if isi != False:
+    #         break
+    
 proxy = {}
 def proxy_port():
     r = requests.get("https://free-proxy-list.net")
